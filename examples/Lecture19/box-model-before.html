@@ -4,17 +4,37 @@
 <meta charset="utf-8">
 <title>The Box Model</title>
 <style>
+* { /* select every element (different from inheriting) */
+  box-sizing: border-box; /* not inherited property */
+  margin: 0;
+  padding: 0;
+   /* writing these in body{} doesn't override browser's default stylesheet since they are defined for every specific element(like h1) */
+   /* write these in *{} to override browser default stylesheet */
+}
 
 body {
   background-color: gray;
 }
 
 #box {
-  background-color: blue;
+  background-color: blue; 
+  padding: 10px;
+  /* == padding: 10px 10px 10px 10px; means top 10px, right 10px, bottom 10px, left 10px*/
+
+  border: 5px solid black;
+  /* margin: 40px; */
+  margin-top: 20px;
+  height: 50px;
+  overflow:auto;
+
+  width: 300px;
+  /* we're actually setting the width of the 'content' */
+   /* after box-sizing: border- box, we're setting the width of the 'box' to be 300px */
+   /* this is the modern defacto default */
 }
-#content {
+/* #content {
   background-color: #90EE90; /*green*/
-}
+/* }  */
 
 h1 {
   margin-bottom: 30px;
@@ -27,7 +47,7 @@ h1 {
 <h1>Box Model</h1>
 
 <div id="box">
-  <div id="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </div>
+  <div id="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex atque et repellendus a culpa. Itaque consequatur nam, veniam quos sed quia laborum, in reprehenderit aperiam vel assumenda maxime, totam ipsa!</div>
 </div>
 
 

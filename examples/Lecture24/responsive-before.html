@@ -2,6 +2,9 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
 <title>Responsive Layout</title>
 <style>
 
@@ -22,6 +25,9 @@ p {
   margin-left: auto;
   font-family: Helvetica;
   color: white;
+
+   /* gave width and margin-right and left auto
+      to center element in a block-level element */
 }
 
 /* Simple Responsive Framework. */
@@ -76,7 +82,7 @@ p {
 /********** Medium devices only **********/
 @media (min-width: 950px) and (max-width: 1199px) {
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
-    float: left;
+    float: left; 
     border: 1px solid green;
   }
   .col-md-1 {
@@ -124,9 +130,16 @@ p {
 
 <div class="row">
   <div class="col-lg-3 col-md-6"><p>Item 1</p></div>
+   <!-- when width 1200px or more, col-md-6 is ignored by browser 
+        since browser doesn't even think that col-md-6 class exists -->
   <div class="col-lg-3 col-md-6"><p>Item 2 Wow this is cool</p></div>
   <div class="col-lg-3 col-md-6"><p>Item 3</p></div>
   <div class="col-lg-3 col-md-6"><p>Item 4</p></div>
+
+  <!-- continue since floating elements just flow to the next line -->
+  <!-- if width smaller than 950px, float: left not applied so 
+        just works as normal block-level elements -->
+
   <div class="col-lg-3 col-md-6"><p>Item 5 This is cool</p></div>
   <div class="col-lg-3 col-md-6"><p>Item 6</p></div>
   <div class="col-lg-3 col-md-6"><p>Item 7</p></div>

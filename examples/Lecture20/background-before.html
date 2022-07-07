@@ -7,7 +7,23 @@
 #bg {
   width: 500px;
   height: 500px;
-  
+
+  background-color: blue;
+  background-image: url("yaakov.png");
+  /* url should be relative to the way the CSS file is served in the browser */
+
+
+  background-repeat:no-repeat;
+  background-position: top right;
+   /* background-position: horizontal vertical */
+   /* w/o one, the other will default to center */
+   /* background-image wins background-color */
+
+
+  /* Above can be written in just one line */
+   background: url("yaakov.png") no-repeat right center;
+   /* background color is not black. Giving property w/o a dash will override 
+      every property I haven't specified to default. Specify 'blue' to make bg color blue */
 }
 
 </style>

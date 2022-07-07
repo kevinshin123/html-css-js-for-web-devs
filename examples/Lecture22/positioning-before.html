@@ -15,6 +15,10 @@ h1 {
 
 div#container {
   background-color: #00FFFF;
+
+  position: relative;
+  top: 60px;
+  /* contained elements 데리고 내려감 */
 }
 p {
   width: 50px;
@@ -24,12 +28,25 @@ p {
 }
 #p1 {
   background-color: #A52A2A;
+
+  position: relative;
+  top: 65px;
+  left: 65px;
+   /* normal doc. flow에 유지됨 */
 }
 #p2 {
   background-color: #DEB887;
 }
 #p3 {
   background-color: #5F9EA0;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+   /* normal doc. flow에서 빠짐 */
+   /* static 아닌 nearest ancestor 기준으로, 
+      positioning 따로 안주면 html element 기준으로 페이지 왼쪽 위에 붙어버림 */
+  
 }
 #p4 {
   background-color: #FF7F50;
